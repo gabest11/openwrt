@@ -334,7 +334,9 @@ define Device/asus_rt-ax53u
   IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
 	check-size
   DEVICE_PACKAGES := kmod-mt7915-firmware kmod-usb3 uboot-envtools \
-	kmod-usb-ledtrig-usbport
+  kmod-usb-ledtrig-usbport
+  DEVICE_COMPAT_VERSION := 1.2
+  DEVICE_COMPAT_MESSAGE := ubi partition has been resized
 endef
 TARGET_DEVICES += asus_rt-ax53u
 
