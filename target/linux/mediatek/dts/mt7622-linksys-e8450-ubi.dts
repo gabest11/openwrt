@@ -13,7 +13,7 @@
 
 	chosen {
 		rootdisk = <&ubi_rootfs>;
-		bootargs = "earlycon=uart8250,mmio32,0x11002000 console=ttyS0,115200n1 swiotlb=512 ubi.block=0,fit root=/dev/fit0";
+		bootargs = "earlycon=uart8250,mmio32,0x11002000 console=ttyS0,115200n1 swiotlb=512 ubi.block=0,fit root=/dev/fit0 rootwait";
 	};
 };
 
@@ -38,14 +38,14 @@
 				ubi-volume-ubootenv {
 					volname = "ubootenv";
 					nvmem-layout {
-						compatible = "u-boot,env-redundant-bool-layout";
+						compatible = "u-boot,env-redundant-bool";
 					};
 				};
 
 				ubi-volume-ubootenv2 {
 					volname = "ubootenv2";
 					nvmem-layout {
-						compatible = "u-boot,env-redundant-bool-layout";
+						compatible = "u-boot,env-redundant-bool";
 					};
 				};
 
