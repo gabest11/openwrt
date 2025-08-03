@@ -19,6 +19,7 @@
 #include <asm/mach-ralink/ralink_regs.h>
 #include <linux/of_device.h>
 #include <linux/of_irq.h>
+#include <linux/of_platform.h>
 
 #include <linux/switch.h>
 #include <linux/reset.h>
@@ -1520,7 +1521,7 @@ int rt3050_esw_init(struct fe_priv *priv)
 
 static struct platform_driver esw_driver = {
 	.probe = esw_probe,
-	.remove_new = esw_remove,
+	.remove = esw_remove,
 	.driver = {
 		.name = "rt3050-esw",
 		.of_match_table = ralink_esw_match,
