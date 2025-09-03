@@ -462,7 +462,7 @@ define Device/asus_rt-ax53u
   DEVICE_MODEL := RT-AX53U
   DEVICE_ALT0_VENDOR := ASUS
   DEVICE_ALT0_MODEL := RT-AX1800U
-  IMAGE_SIZE := 114000k
+  IMAGE_SIZE := 51200k
   IMAGES += factory.bin
   IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
 	check-size
